@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {  NavController } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -40,7 +41,8 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     ServicesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

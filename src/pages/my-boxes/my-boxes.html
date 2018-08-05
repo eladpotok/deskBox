@@ -1,0 +1,29 @@
+<!--
+  Generated template for the MyBoxesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>myBoxes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list no-lines>
+        <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody" >
+          <ion-avatar item-start>
+            <img>
+          </ion-avatar>
+          <h2> {{ item.boxName }}</h2>
+          <p>{{ item.lastPickUp }}</p>
+          
+          <ion-icon item-end name="key" *ngIf="item.isOwner"></ion-icon>
+          <h2 item-end > {{ item.isFull  }}  </h2>
+        </ion-item>
+      </ion-list> 
+</ion-content>

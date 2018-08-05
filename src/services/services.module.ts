@@ -3,6 +3,7 @@ import { AuthService } from './auth.service';
 import { RoomsService } from './rooms.service';
 import { MessagesService } from './messages.service';
 import { NgModule } from '@angular/core';
+import { Server } from './server.service';
 
 
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     providers: [
         AuthService,
         RoomsService,
-        MessagesService
+        MessagesService,
+        Server
     ],
     exports: [
     ]

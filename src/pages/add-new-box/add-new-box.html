@@ -17,14 +17,16 @@
   <ion-list>
 
     <ion-item>
+        <ion-label stacked>Box Name</ion-label>
+        <ion-input type="text" placeholder="Box Name..." [(ngModel)]="boxName"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label stacked>Owner Name</ion-label>
-      <ion-input type="text" placeholder="Name..." [(ngModel)]="ownerName"></ion-input>
+      <ion-input type="text" placeholder="Owner Name..." [(ngModel)]="ownerName"></ion-input>
     </ion-item>
   
-    <ion-item>
-      <ion-label stacked>Position</ion-label>
-      <ion-input type="text" placeholder="Position..." [(ngModel)]="ownerPosition"></ion-input>
-    </ion-item>
+
 
     <ion-item>
         <ion-label stacked>Phone Number</ion-label>
@@ -33,6 +35,8 @@
   
   </ion-list>
 
-<button (click)="addBox()"></button>
+<button  (click)="addBox()">
+  <label>Add</label>
+</button>
 
 </ion-content>
