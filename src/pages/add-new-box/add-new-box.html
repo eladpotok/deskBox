@@ -1,0 +1,38 @@
+<!--
+  Generated template for the AddNewBoxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addNewBox</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Owner Name</ion-label>
+      <ion-input type="text" placeholder="Name..." [(ngModel)]="ownerName"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Position</ion-label>
+      <ion-input type="text" placeholder="Position..." [(ngModel)]="ownerPosition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Phone Number</ion-label>
+        <ion-input type="text" placeholder="Phone Number..." [(ngModel)]="ownerPhone"></ion-input>
+      </ion-item>
+  
+  </ion-list>
+
+<button (click)="addBox()"></button>
+
+</ion-content>

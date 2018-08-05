@@ -1,0 +1,35 @@
+
+<ion-header class="title">
+
+  <ion-navbar class="title" hideBackButton >
+    <ion-title class="title">
+      <label>   {{ roomName }} - </label>
+      <label class="entryCodeLabel"> {{ entryCode }} </label>
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="goSettings()" class="settingsButton" *ngIf="isOwner">
+        <ion-icon name="md-settings" ></ion-icon>    
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="body">
+
+  <ion-list no-lines>
+    <ion-item ion-item *ngFor="let item of roomService.usersModel" class="cardBody" >
+      <ion-avatar item-start>
+        <img [src]="item.imageUrl">
+      </ion-avatar>
+      <h2> {{ item.displayName }}</h2>
+      <p>{{ item.level }}</p>
+      
+      <ion-icon item-end name="key" *ngIf="item.isOwner"></ion-icon>
+      <h2 item-end > {{ item.pointsInRoom  }} points </h2>
+    </ion-item>
+  </ion-list> 
+
+  <button ion-button (click)="startGame()" *ngIf="isOwner" class="myButton" >Start !</button>
+  <button ion-button (click)="exit()" class="leaveButton" >Leave</button>
+</ion-content>

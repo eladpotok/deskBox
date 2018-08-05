@@ -1,0 +1,54 @@
+page-guess {
+    .card-background-page {
+        background: url("../assets/appBackground.png"); 
+
+    ion-card {
+        position: relative;
+        text-align: center;
+         
+    }
+
+    .card-title {
+        position: absolute;
+        top: 60%;
+        font-size: 2.0em;
+        width: 120%;
+        font-weight: bold;
+        color: #fff;
+        
+    }
+
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+
+    }
+
+    .cardsize {
+        // height: 140px;
+        background-color: transparent;
+        // border-radius: 30px;
+        // margin-bottom: 5px; 
+    }
+
+    .imgSize {
+        position: absolute;
+        height: 100px;
+        margin-left: 10px;
+        width: 140px;
+        top: 16%;
+    }
+
+    .swipeIcon {
+        height: 35px;
+    }
+
+    .timer {
+        margin-right: 20px;
+        font-size: 25px;
+    }
+}

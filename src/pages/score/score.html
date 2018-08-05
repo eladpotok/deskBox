@@ -1,0 +1,59 @@
+<!--
+  Generated template for the ScorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding class="bodyCategoryEmpty">
+   
+   <ion-card [ngClass]="isSpyWon ? 'backgroundWin' : 'backgroundLose'">
+
+   <ion-item [ngClass]="isSpyWon ? 'backgroundWin' : 'backgroundLose'">
+    <ion-avatar item-start>
+      <img [src]="currentUser.imageUrl">
+    </ion-avatar>
+    <h2 >{{ spy?.displayName }}</h2>
+    <p> +  {{getPointsOfSpy()}} points </p>
+
+    <p class="greatGuess" item-end *ngIf="isGreatGuess"> Great Guess </p>
+  </ion-item>
+
+  <img src="assets/spy2.png">
+
+</ion-card>
+
+<ion-list >
+    <ion-item-group>
+        <ion-item-divider color="light">Discover</ion-item-divider>
+
+        <ion-item  *ngFor="let user of winUsers">
+          <ion-avatar item-start>
+            <img [src]="user.imageUrl">
+          </ion-avatar>
+          <h2 >{{ user.displayName }}</h2>
+          <p>+ {{ getNewPointsForWinners()}} points</p>
+          <p item-end> Voted for {{  votesFor(user) }} </p>
+        </ion-item>
+
+  </ion-item-group>
+  <ion-item-group>
+        <ion-item-divider color="light">Faults:</ion-item-divider>
+
+        <ion-item  *ngFor="let user of loseUsers">
+          <ion-avatar item-start>
+            <img [src]="user.imageUrl">
+          </ion-avatar>
+          <h2 >{{ user.displayName }}</h2>
+          <p>+ {{ getNewPointsForLosers()}} points</p>
+          <p item-end> Voted for {{  votesFor(user) }} </p>
+        </ion-item>
+
+  </ion-item-group>
+</ion-list>
+
+<!--<button  ion-button (click)="backToLobby()" class="myButton">Back to Room</button>-->
+
+</ion-content>
