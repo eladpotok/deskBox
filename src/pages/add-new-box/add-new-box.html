@@ -7,36 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>addNewBox</ion-title>
+    <ion-title>Add New Box</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="body" >
   <ion-list>
 
-    <ion-item>
-        <ion-label stacked>Box Name</ion-label>
+    <ion-item class="transparent">
         <ion-input type="text" placeholder="Box Name..." [(ngModel)]="boxName"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Owner Name</ion-label>
+    <ion-item class="transparent">
       <ion-input type="text" placeholder="Owner Name..." [(ngModel)]="ownerName"></ion-input>
     </ion-item>
-  
 
-
-    <ion-item>
-        <ion-label stacked>Phone Number</ion-label>
+    <ion-item class="transparent"> 
         <ion-input type="text" placeholder="Phone Number..." [(ngModel)]="ownerPhone"></ion-input>
       </ion-item>
   
   </ion-list>
 
-<button  (click)="addBox()">
-  <label>Add</label>
-</button>
+  <div padding>
+      <button ion-button color="primary" block (click)="addBox()">Accept</button>
+  </div>
+
+
 
 </ion-content>

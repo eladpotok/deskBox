@@ -5,23 +5,22 @@ bower_components/humanize-duration/humanize-duration.js
 
 
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+        <button ion-button icon-only color="royal" (click)="openCredentials()">
+          <ion-icon name="menu" ></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title ngClass="title">desKBox</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
 
 
 <ion-content class="homeBody">
 
-
-
-
-  <ion-card>
-    <ion-card-header>
-      Explore Nearby
-    </ion-card-header>
   
-    <ion-list>
+    <ion-list class="transparent" no-lines>
       <button ion-item (click)="showBoxes()">
         <ion-icon name="locate" item-start></ion-icon>
         My Boxes
@@ -33,8 +32,7 @@ bower_components/humanize-duration/humanize-duration.js
       </button>
   
     </ion-list>
-  </ion-card>
-  
+   
 
 
 </ion-content>

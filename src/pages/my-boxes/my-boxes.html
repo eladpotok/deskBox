@@ -7,23 +7,46 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>myBoxes</ion-title>
+    <ion-title>My Boxes</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="body">
     <ion-list no-lines>
-        <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody" >
-          <ion-avatar item-start>
-            <img>
-          </ion-avatar>
-          <h2> {{ item.boxName }}</h2>
-          <p>{{ item.lastPickUp }}</p>
+        <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody" (swipe)="remove()" (click)="choose(item)">
+          <ion-grid>
+
+              <ion-row>
+                <ion-item class="transparent">
+          <ion-icon item-start  name="cube" class="imageBox"></ion-icon>
           
-          <ion-icon item-end name="key" *ngIf="item.isOwner"></ion-icon>
-          <h2 item-end > {{ item.isFull  }}  </h2>
+          <label class="boxName"> {{ item.boxName }}</label>
+          <h3> {{ item.address }}</h3>
+          <p> Last Pick Up:   {{ item.lastPickUp }}</p>
+
+          <ion-icon item-end name="call"></ion-icon>
+          <label *ngIf="item.isFull" class="fullSince">{{ item.fullSince }}</label>
+          
+          <button item-end *ngIf="item.isFull" class="full">
+              <label>Box is Full</label>
+          </button>
+          <button item-end *ngIf="!item.isFull" class="empty" (click)="askStatus(item)">
+              <label>Ask Status</label>
+          </button></ion-item>
+        </ion-row>
+          <!-- <button center *ngIf="item.isExpanded"> Update box </button> -->
+          <!-- <img class="mapImage" src="assets/map.png" *ngIf="item.isExpanded"> -->
+         <ion-row>
+          <google-map [x]=item.latitude [y]=item.longitude class="mapImage" *ngIf="item.isExpanded"></google-map>
+         </ion-row>
+        </ion-grid>
         </ion-item>
+        
       </ion-list> 
+
+      <div padding>
+        <button ion-button color="primary" block (click)="showInMap ()">Show In Map</button>
+    </div>
 </ion-content>

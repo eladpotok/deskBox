@@ -26,8 +26,8 @@ export class AddNewBoxPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               public server: Server) {
 
-          this.latitude = 30;
-          this.longitude = 40;
+        this.latitude = 30;
+        this.longitude = 40;
 
   }
 
@@ -38,7 +38,7 @@ export class AddNewBoxPage {
   addBox(){
     console.log("printing" + this.ownerName);
     this.server.addBox(this.ownerName, this.boxName, this.latitude, this.longitude, this.ownerPhone)
-            .then(function(response) {
+              .then(function(response) {
       return response.json();
     })
     .then(response => {

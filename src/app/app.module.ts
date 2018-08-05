@@ -11,8 +11,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {  NavController } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { AngularFireModule } from 'angularfire2';
 
 // New imports to update based on AngularFire2 version 4
@@ -32,6 +30,7 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    // GoogleMapComponent
     
   ],
   imports: [

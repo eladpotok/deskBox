@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 
 @Component({
@@ -10,7 +11,7 @@ export class HomePage {
 
 
       
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
 
   }
@@ -26,6 +27,10 @@ export class HomePage {
 
     this.navCtrl.push("AddNewBoxPage");
 
+  }
+
+  public openCredentials(){
+    this.navCtrl.push("LoginPage");
   }
   
 

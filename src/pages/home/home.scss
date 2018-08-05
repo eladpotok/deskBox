@@ -8,10 +8,19 @@ page-home {
             margin-left: auto;
             margin-bottom: 30px;
         };
+
+        .ion-title{
+            background-color: white;
+        }
+
+        .transparent{
+            background-color: transparent;
+        }
     
         .homeBody {
             background-image: url("../assets/appBackground.PNG"); 
             background-size:cover;
+            background-color: transparent;
             vertical-align: middle;
         };
     

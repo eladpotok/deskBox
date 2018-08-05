@@ -27,7 +27,7 @@ import { BoxDescription } from '../Models/BoxDescription';
 
     public getBoxes() : Promise<Response> {
         let url = this.http + "/GetAllBoxes?";
-
+        
         return fetch(url);
 
     }
