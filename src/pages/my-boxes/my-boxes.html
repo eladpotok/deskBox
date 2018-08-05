@@ -15,10 +15,10 @@
 
 <ion-content padding class="body">
     <ion-list no-lines>
-        <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody" (swipe)="remove()" (click)="choose(item)">
+        <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody"  >
           <ion-grid>
 
-              <ion-row>
+              <ion-row (swipe)="remove()" (click)="choose(item)"> 
                 <ion-item class="transparent">
           <ion-icon item-start  name="cube" class="imageBox"></ion-icon>
           
