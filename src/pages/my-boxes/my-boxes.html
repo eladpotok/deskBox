@@ -26,13 +26,13 @@
         <ion-item ion-item *ngFor="let item of myBoxes" class="cardBody"  >
           <ion-grid>
 
-              <ion-row (swipe)="remove()" (click)="choose(item)"> 
+              <ion-row  (swipe)="remove()" (click)="choose(item)"> 
                 <ion-item class="transparent">
-          <ion-icon item-start  name="cube" class="imageBox"></ion-icon>
+                <ion-icon   name="cube" class="imageBox"></ion-icon>
           
           <label class="boxName"> {{ item.boxName }}</label>
           <h3> {{ item.address }}</h3>
-          <p> Last Pick Up:   {{ item.lastPickUp }}</p>
+          <label class="lastPickUp"> Last Pick Up:   {{ item.lastPickUp }}</label>
 
           <ion-icon item-end name="call"></ion-icon>
           <label *ngIf="item.isFull" class="fullSince">{{ item.fullSince }}</label>

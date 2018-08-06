@@ -11,7 +11,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class MyBoxesPage {
 
-  myBoxes: BoxDescription[];
+  myBoxes: BoxDescription[]=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public server: Server,
               public alert: AlertController) {
@@ -23,6 +23,8 @@ export class MyBoxesPage {
         this.myBoxes = (<any>Object).values(response.Boxes).map(box => <BoxDescription>box);
         
       });
+
+    
 
    
   }

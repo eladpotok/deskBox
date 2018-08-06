@@ -14,6 +14,7 @@ page-my-boxes {
     .mapImage {
         display: inline-block;
         width: 100%;
+        margin-left: 14px;
         height: 150px;
     }
 
@@ -24,17 +25,27 @@ page-my-boxes {
     .empty{
         background-color: lightblue;   
         vertical-align: top;
-        height: 45px;
+        height: 45px;;
         border-radius: 10px;
+        
     }
-    
+    .lastPickUp{
+        font-size:10px;
+        color: gray;
+        font-weight: bold;
+    }
     .boxName{
-        font-size: 20px;
+        font-size: 25px;
+        margin-left: 10px;
+         vertical-align: top;
+        margin-top: -40px;
         font-weight: bold;
     }
 
     .imageBox {
         color: gray;
+        vertical-align: top;   
+        font-size: 30px; 
     }
 
     .fullSince{
