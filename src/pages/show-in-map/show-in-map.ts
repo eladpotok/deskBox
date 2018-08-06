@@ -18,6 +18,7 @@ export class ShowInMapPage {
 
   xCollection: number[]= [];
   yCollection: number[]=[];
+  labels: string[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     var myBoxes = this.navParams.get('myBoxes');
@@ -26,6 +27,7 @@ export class ShowInMapPage {
     for(let i=0; i< myBoxes.length;i++){
       this.xCollection.push(myBoxes[i].latitude);
       this.yCollection.push(myBoxes[i].longitude);
+      this.labels.push(myBoxes[i].boxName);
     }
     
 

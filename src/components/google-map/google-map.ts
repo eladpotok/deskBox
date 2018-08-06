@@ -16,6 +16,7 @@ export class GoogleMapComponent {
   @Input() label: any;
   @Input() xCollection: any;
   @Input() yCollection: any;
+  @Input() labels: any;
 
   constructor() {
     this.text = 'Hello World';
@@ -64,10 +65,11 @@ export class GoogleMapComponent {
     for (var _i = 0; _i < this.xCollection.length; _i++) {
       var x = this.xCollection[_i];
       var y = this.yCollection[_i];
+      var labels = this.labels[_i];
       var coordinate = new google.maps.LatLng(x, y);
       let marker = new google.maps.Marker( {
         map: this.map,
-        label: this.label,
+        label: labels,
         position: coordinate
       })
   }
