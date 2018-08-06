@@ -14,6 +14,8 @@ export class GoogleMapComponent {
   @Input() x: any;
   @Input() y: any;
   @Input() label: any;
+  @Input() xCollection: any;
+  @Input() yCollection: any;
 
   constructor() {
     this.text = 'Hello World';
@@ -26,9 +28,13 @@ export class GoogleMapComponent {
 
   initMap(){
 
+    if(this.xCollection != null){
+      this.initMultipleMap();
+      return;
+    }
+
     console.log(this.x);
     let coords = new google.maps.LatLng(this.x,this.y);
-    let coords2 = new google.maps.LatLng(11,2);
     let mapOptions = {
       center: coords,
       zoom: 15,
@@ -43,10 +49,31 @@ export class GoogleMapComponent {
     })
     
   }
-
-
-    
   
+  initMultipleMap(){
+    let coords = new google.maps.LatLng(this.xCollection[0],this.yCollection[0]);
+    let mapOptions = {
+      center: coords,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+    let markerCoodinate: Number[];
+    for (var _i = 0; _i < this.xCollection.length; _i++) {
+      var x = this.xCollection[_i];
+      var y = this.yCollection[_i];
+      var coordinate = new google.maps.LatLng(x, y);
+      let marker = new google.maps.Marker( {
+        map: this.map,
+        label: this.label,
+        position: coordinate
+      })
+  }
+    
+    
+  }
   
 
 }

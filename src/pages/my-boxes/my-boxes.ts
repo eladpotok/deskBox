@@ -75,7 +75,7 @@ export class MyBoxesPage {
   }
 
   public showInMap(){
-    this.navCtrl.push("ShowInMapPage");
+    this.navCtrl.push("ShowInMapPage", {myBoxes: this.myBoxes});
   }
 
   public choose(box: BoxDescription){

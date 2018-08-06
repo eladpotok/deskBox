@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MyBoxesPage } from './my-boxes';
-import { GoogleMapComponent } from '../../components/google-map/google-map'
+import { GlobalPageModule } from '../../global.module'
 
 @NgModule({
   declarations: [
-    MyBoxesPage,GoogleMapComponent
+    MyBoxesPage, 
   ],
   imports: [
-    IonicPageModule.forChild(MyBoxesPage),
+    IonicPageModule.forChild(MyBoxesPage),GlobalPageModule
   ],
   exports: [
     MyBoxesPage

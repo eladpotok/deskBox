@@ -7,7 +7,7 @@ import { BoxDescription } from '../Models/BoxDescription';
     http: String;
     
     constructor() {
-        this.http = "http://192.168.3.61:8080";
+        this.http = "http://192.168.30.13:8080";
     }
 
     public addBox(ownerName: String, boxName: String, lat: number, long: number, phone: String) : Promise<Response> {

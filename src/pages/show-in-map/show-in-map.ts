@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GoogleMapComponent } from '../../components/google-map/google-map';
+import { BoxDescription } from '../../Models/BoxDescription';
 
 /**
  * Generated class for the ShowInMapPage page.
@@ -15,8 +15,20 @@ import { GoogleMapComponent } from '../../components/google-map/google-map';
 })
 export class ShowInMapPage {
 
+
+  xCollection: number[]= [];
+  yCollection: number[]=[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  
+    var myBoxes = this.navParams.get('myBoxes');
+
+
+    for(let i=0; i< myBoxes.length;i++){
+      this.xCollection.push(myBoxes[i].latitude);
+      this.yCollection.push(myBoxes[i].longitude);
+    }
+    
+
   }
 
   ionViewDidLoad() {

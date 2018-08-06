@@ -4,9 +4,11 @@ import { GoogleMapComponent } from './google-map/google-map';
 
 @NgModule({
 	declarations: [TimerComponent,
-    GoogleMapComponent],
+    GoogleMapComponent,
+    ],
 	imports: [ ],
 	exports: [TimerComponent,
-    GoogleMapComponent]
+    GoogleMapComponent,
+    ]
 })
 export class ComponentsModule {}
