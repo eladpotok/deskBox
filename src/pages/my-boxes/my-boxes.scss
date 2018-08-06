@@ -6,10 +6,19 @@ page-my-boxes {
         border-radius: 10px;
     }
 
+    .mapButton {
+        height:35px;
+        background-color: transparent;
+    }
+
     .mapImage {
         display: inline-block;
         width: 100%;
         height: 150px;
+    }
+
+    .mapImage {
+        font-size: 35px;
     }
 
     .empty{

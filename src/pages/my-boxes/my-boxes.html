@@ -6,11 +6,19 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>My Boxes</ion-title>
+  <ion-navbar   >
+    <ion-title >
+      <label>   My Boxes </label>
+    </ion-title>
+    <ion-buttons end>
+      <button class="mapButton" (click)="showInMap()" >
+        <ion-icon name="md-map" class="mapImage"></ion-icon>    
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
+
+
 
 
 <ion-content padding class="body">
@@ -46,7 +54,7 @@
         
       </ion-list> 
 
-      <div padding>
+      <!-- <div padding>
         <button ion-button color="primary" block (click)="showInMap ()">Show In Map</button>
-    </div>
+    </div> -->
 </ion-content>
