@@ -13,15 +13,14 @@ export class GoogleMapComponent {
 
   @Input() x: any;
   @Input() y: any;
+  @Input() label: any;
 
   constructor() {
-    console.log(this.x);
     this.text = 'Hello World';
   }
 
 
   ngOnInit(){
-    console.log("map is on init");
     this.initMap();
   }
 
@@ -29,6 +28,7 @@ export class GoogleMapComponent {
 
     console.log(this.x);
     let coords = new google.maps.LatLng(this.x,this.y);
+    let coords2 = new google.maps.LatLng(11,2);
     let mapOptions = {
       center: coords,
       zoom: 15,
@@ -38,6 +38,7 @@ export class GoogleMapComponent {
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     let marker = new google.maps.Marker( {
       map: this.map,
+      label: this.label,
       position: coords
     })
     

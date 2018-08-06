@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Server } from '../../services/server.service';
 
 
-/**
- * Generated class for the AddNewBoxPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-add-new-box',
@@ -36,7 +31,6 @@ export class AddNewBoxPage {
   }
 
   addBox(){
-    console.log("printing" + this.ownerName);
     this.server.addBox(this.ownerName, this.boxName, this.latitude, this.longitude, this.ownerPhone)
               .then(function(response) {
       return response.json();

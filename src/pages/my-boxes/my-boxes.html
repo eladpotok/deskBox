@@ -39,7 +39,7 @@
           <!-- <button center *ngIf="item.isExpanded"> Update box </button> -->
           <!-- <img class="mapImage" src="assets/map.png" *ngIf="item.isExpanded"> -->
          <ion-row>
-          <google-map [x]=item.latitude [y]=item.longitude class="mapImage" *ngIf="item.isExpanded"></google-map>
+          <google-map [label]=item.boxName [x]=item.latitude [y]=item.longitude class="mapImage" *ngIf="item.isExpanded"></google-map>
          </ion-row>
         </ion-grid>
         </ion-item>

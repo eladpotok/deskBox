@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+
 
 
 @Component({
@@ -10,6 +11,7 @@ import { ModalController } from 'ionic-angular';
 export class HomePage {
 
 
+
       
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
@@ -17,8 +19,6 @@ export class HomePage {
   }
 
   public showBoxes(){
-
-    // fetch all coordinates from server
 
     this.navCtrl.push("MyBoxesPage");
   }
