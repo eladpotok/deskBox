@@ -5,20 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons start>
-      <button ion-button icon-only color="royal" (click)="openCredentials()">
-        <ion-icon name="md-contact" ></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title ngClass="title">Welcome to desKBox</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+        <button ion-button icon-only color="royal" (click)="openCredentials()">
+          <ion-icon name="md-contact" ></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title ngClass="title">Welcome to desKBox</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 
 <ion-content padding class="body">
-<label class="rcorners">desKBox</label>
-<button ion-item (click)="reportStatus()">
-  <img src="assets/images/qrcode.png">
-</button>
+  <div  layout-align="center" margin-top=400px margin-bottom=300px>
+    <label class="rcorners">desKBox</label>
+  </div>
+  <button ion-item (click)="reportStatus()">
+    <img src="assets/images/qrcode.png">
+  </button>
 </ion-content>
