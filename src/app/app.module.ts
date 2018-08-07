@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.service';
 import { ServicesModule } from '../services/services.module'; 
 import { FormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { QrilustrationPage } from '../pages/qrilustration/qrilustration';
 import {  NavController } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
@@ -29,7 +29,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    QrilustrationPage,
     // GoogleMapComponent
     
   ],
@@ -46,7 +46,7 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    QrilustrationPage,
 
     
   ],
