@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
 import { QrilustrationPage } from '../pages/qrilustration/qrilustration';
 import {  NavController } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 
 // New imports to update based on AngularFire2 version 4
@@ -41,7 +40,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     ServicesModule,
     FormsModule,
-    HttpClientModule,
+   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
