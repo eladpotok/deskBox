@@ -1,0 +1,49 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>desKBox</ion-title>
+  </ion-navbar>
+
+</ion-header>
+  
+
+
+<ion-content class="homeBody">
+
+  <ion-grid>
+    <ion-row>
+    <ion-col>
+        
+
+      <div ion-item (click)="showBoxes()" class="buttonMenu">  
+          <ion-row>
+              <ion-icon class="buttonIcon" name="locate" ></ion-icon>  
+            </ion-row>
+            <ion-row >
+                <label class="buttonIcon2">My Boxes</label>
+              </ion-row>
+        
+        
+      </div>
+    </ion-col>
+    <ion-col>
+      <div ion-item (click)="addBox()" class="buttonMenu">
+          <ion-row>
+              <ion-icon class="buttonIcon" name="add-circle" ></ion-icon>  
+            </ion-row>
+            <ion-row >
+                <label class="buttonIcon2">Add Box</label>
+              </ion-row>
+        
+      </div>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+   
+
+
+</ion-content>
+
+

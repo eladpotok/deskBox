@@ -29,6 +29,9 @@ export class QrilustrationPage {
     this.navCtrl.push("BoxReportPage");
   }
 
-
+  public openCredentials(){
+    this.navCtrl.push("LoginPage");
+  }
+  
 
 }
