@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireAuth } from 'angularfire2/auth'
 import { AuthService } from '../services/auth.service';
 import { HomePage } from '../pages/home/home';
+import { QrilustrationPage } from '../pages/qrilustration/qrilustration';
 
 @Component({
 
@@ -12,7 +13,7 @@ import { HomePage } from '../pages/home/home';
 })
 
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = QrilustrationPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public afAuth: AngularFireAuth,
   public auth: AuthService) {
